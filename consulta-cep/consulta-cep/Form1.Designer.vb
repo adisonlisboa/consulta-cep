@@ -29,12 +29,12 @@ Partial Class ConsultaCep
         Me.txtUF = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtCidade = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtNumero = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtTipologradouro = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtLogradouro = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtBairro = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnConsultar
@@ -94,22 +94,6 @@ Partial Class ConsultaCep
         Me.txtCidade.Size = New System.Drawing.Size(316, 20)
         Me.txtCidade.TabIndex = 5
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(385, 94)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "NÚMERO:"
-        '
-        'txtNumero
-        '
-        Me.txtNumero.Location = New System.Drawing.Point(388, 110)
-        Me.txtNumero.Name = "txtNumero"
-        Me.txtNumero.Size = New System.Drawing.Size(112, 20)
-        Me.txtNumero.TabIndex = 7
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -129,7 +113,7 @@ Partial Class ConsultaCep
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 94)
+        Me.Label6.Location = New System.Drawing.Point(9, 97)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(87, 13)
         Me.Label6.TabIndex = 12
@@ -137,22 +121,38 @@ Partial Class ConsultaCep
         '
         'txtLogradouro
         '
-        Me.txtLogradouro.Location = New System.Drawing.Point(12, 110)
+        Me.txtLogradouro.Location = New System.Drawing.Point(12, 113)
         Me.txtLogradouro.Name = "txtLogradouro"
-        Me.txtLogradouro.Size = New System.Drawing.Size(370, 20)
+        Me.txtLogradouro.Size = New System.Drawing.Size(488, 20)
         Me.txtLogradouro.TabIndex = 11
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(9, 138)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(51, 13)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "BAIRRO:"
+        '
+        'txtBairro
+        '
+        Me.txtBairro.Location = New System.Drawing.Point(12, 154)
+        Me.txtBairro.Name = "txtBairro"
+        Me.txtBairro.Size = New System.Drawing.Size(488, 20)
+        Me.txtBairro.TabIndex = 13
         '
         'ConsultaCep
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(518, 166)
+        Me.ClientSize = New System.Drawing.Size(514, 186)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.txtBairro)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtLogradouro)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtTipologradouro)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtNumero)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtCidade)
         Me.Controls.Add(Me.Label2)
@@ -174,10 +174,10 @@ Partial Class ConsultaCep
     Friend WithEvents txtUF As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtCidade As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtNumero As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtTipologradouro As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtLogradouro As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtBairro As TextBox
 End Class
