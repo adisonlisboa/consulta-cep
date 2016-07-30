@@ -2,7 +2,7 @@
 
     Dim ht As Hashtable
     Dim ds As DataSet
-    Dim _resultado As String
+    Dim resultado As String
 
     Private Sub btnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
         'limpa o conteudo das textboxs
@@ -12,15 +12,15 @@
         BuscaCep(txtCep.Text)
 
         'tratamos o resultado
-        If _resultado = Nothing Then
+        If resultado = Nothing Then
             Exit Sub
-        ElseIf _resultado = 1 Then
+        ElseIf resultado = 1 Then
             txtUF.Text = ht.Values(3)
             txtCidade.Text = ht.Values(2)
             txtBairro.Text = ht.Values(5)
             txtTipologradouro.Text = ht.Values(1)
             txtLogradouro.Text = ht.Values(0)
-        ElseIf _resultado = 2 Then
+        ElseIf resultado = 2 Then
             txtUF.Text = ht.Values(1)
             txtCidade.Text = ht.Values(0)
         Else
@@ -35,9 +35,9 @@
             ds.ReadXml("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep.Replace("-", "").Trim() + "&formato=xml")
             If Not IsNothing(ds) Then
                 If (ds.Tables(0).Rows.Count > 0) Then
-                    _resultado = ds.Tables(0).Rows(0).Item("resultado").ToString()
+                    resultado = ds.Tables(0).Rows(0).Item("resultado").ToString()
                     ht = New Hashtable
-                    Select Case _resultado
+                    Select Case resultado
                         Case "1"
                             ht.Add("UF", ds.Tables(0).Rows(0).Item("uf").ToString().Trim())
                             ht.Add("cidade", ds.Tables(0).Rows(0).Item("cidade").ToString().Trim())
